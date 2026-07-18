@@ -22,6 +22,8 @@
 
 -Microsoft Defender for Cloud continuously assesses Key Vault configurations and provides recommendations to improve security posture and detect suspicious activities.
 
+-I learned that Defender for Key Vault is different from CSPM scanning. Defender for Key Vault protects the vault from external threats while Defender CSPM scanning protects the environment from secrets exposed outside the vault. Both plans are complementary to provide full coverage for the Key Vault security posture. Activating one of the solutions and leaving the other creates a gap in the Key Vault security posture.
+
 ---
 
 ## Lab / Hands-On Work
