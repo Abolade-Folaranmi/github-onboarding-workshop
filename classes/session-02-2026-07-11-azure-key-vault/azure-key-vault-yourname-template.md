@@ -1,11 +1,5 @@
-# My Notes — [REPLACE WITH YOUR FULL NAME]
+# My Notes — IKECHUKWU EZEONU
 
-> **How to use this file:**
-> 1. **Download** this file to your computer — click the **Raw** button on GitHub, then right-click and *Save As*, OR click the download icon at the top-right of the file view
-> 2. **Rename** the downloaded file — replace `yourname` with your actual first and last name in lowercase, separated by hyphens, e.g. `microsoft-entra-oyimafu-emmanuel.md`
-> 3. **Open** the renamed file in any text editor (Notepad, VS Code, TextEdit) and fill in your notes below
-> 4. **Upload** your file to GitHub — go into this session folder on your forked repo, click **Add file → Upload files**, drag in your completed file, then click **Commit changes**
-> 5. **Open a Pull Request** back to the main repo — the facilitator will review your notes before merging
 
 ---
 
@@ -13,9 +7,20 @@
 
 <!-- Write the main ideas covered in today's session -->
 
--
--
--
+-Azure Key Vault is a cloud service used to securely store and manage cryptographic keys, secrets (such as passwords, connection strings, and API keys), and digital certificates. It helps applications avoid hardcoding sensitive information.
+
+-Access to Key Vault can be controlled using Azure RBAC or Key Vault Access Policies. RBAC is the recommended authorization model because it provides centralized access management through Microsoft Entra ID and supports least-privilege access.
+
+-Keys, secrets, and certificates each serve different purposes:
+    -Keys perform cryptographic operations such as encryption, decryption, signing, and verification.
+    -Secrets store sensitive information that applications need during runtime.
+    -Certificates simplify certificate lifecycle management by combining certificates with their associated private keys.
+
+-Key Vault supports soft delete and purge protection, allowing deleted vaults and objects to be recovered while preventing accidental or malicious permanent deletion.
+
+-Key Vault logging can be integrated with Azure Monitor, Log Analytics, and Microsoft Sentinel for auditing and threat investigation.
+
+-Microsoft Defender for Cloud continuously assesses Key Vault configurations and provides recommendations to improve security posture and detect suspicious activities.
 
 ---
 
@@ -25,12 +30,23 @@
 
 ### What I did
 
+-Created an Azure Key Vault.
+-Configured Azure RBAC permissions for users to access the Key Vault.
+-Added and managed secrets within the vault.
+-Enabled soft delete and purge protection.
 
 ### What happened / Result
 
+-Successfully deployed a secure Azure Key Vault.
+-Verified that only authorized users could access secrets based on assigned RBAC roles.
+-Successfully stored, retrieved, updated, and deleted secrets.
+-Confirmed that deleted objects could be recovered using soft delete.
 
 ### Challenges I faced
 
+-Understanding the traditional Key Vault Access Policies and how it differs from Azure RBAC.
+-Remembering which built-in RBAC role provides the minimum permissions required for different administrative tasks.
+-Understanding certificate lifecycle management and how certificates differ from secrets and keys.
 
 ---
 
@@ -38,6 +54,13 @@
 
 <!-- What was most valuable to you personally from this session? -->
 
+-Hardcoding secrets and keys is a very bad security practice.
+
+-Azure Key Vault is not simply a secure storage location but a core security service that protects sensitive assets across Azure environments. 
+
+-Implementing RBAC, enabling soft delete and purge protection, monitoring access logs, and integrating Microsoft Defender for Cloud significantly improve an organization's security posture. 
+
+-I also learned that following the principle of least privilege is essential when granting access to Key Vault resources.
 
 ---
 
@@ -45,8 +68,8 @@
 
 <!-- Anything you want to follow up on or ask the mentor -->
 
--
--
+-I still don't fully understand the concept of using certificates in production.
+-What are the best practices for automatically rotating secrets and certificates in production environments?
 
 ---
 
@@ -54,8 +77,12 @@
 
 <!-- Any links, docs, or Microsoft Learn modules you found helpful -->
 
--
+-Microsoft Learn is a very useful source for this learning.
+- https://learn.microsoft.com/en-us/training/modules/configure-secure-key-vault/
+- https://learn.microsoft.com/en-us/training/modules/manage-keys-secrets-key-vault/
+- https://learn.microsoft.com/en-us/training/modules/manage-certificates-monitor-key-vault/
+- https://learn.microsoft.com/en-us/training/modules/defend-key-vault-defender-cloud/
 
 ---
 
-*Submitted by: [Your Full Name] · [Your GitHub username]*
+*Submitted by: Ikechukwu Ezeonu · Ikechukwu-Ezeonu*
